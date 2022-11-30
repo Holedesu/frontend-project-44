@@ -10,7 +10,7 @@ export default () => {
 
   let i = 0;
 
-  while (i <= 3) {
+  while (i <= 2) {
     const generator = Math.floor(Math.random() * 100);
     const question = `Question: ${generator}`;
     console.log(question);
@@ -29,7 +29,7 @@ export default () => {
     }
     i += 1;
 
-    if (i === 4) {
+    if (i === 3) {
       console.log(`Congratulations, ${name}!`);
     }
   }
