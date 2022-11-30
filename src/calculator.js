@@ -19,11 +19,11 @@ export default () => {
     const signsArrRand = Math.floor(Math.random() * signsArr.length);
 
     const summ = generator1 + generator2;
-    console.log(summ + ' only for record');
+
     const subtract = generator1 - generator2;
-    console.log(subtract + ' only for record');
+
     const mult = generator1 * generator2;
-    console.log(mult + ' only for record');
+
     const question = `Question: ${generator1} ${signsArr[signsArrRand]} ${generator2} `;
 
     console.log(question);
@@ -55,5 +55,5 @@ export default () => {
       console.log(`Congratulations, ${name}!`);
     }
   }
-  return null
+  return null;
 };
