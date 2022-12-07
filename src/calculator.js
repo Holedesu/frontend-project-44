@@ -9,7 +9,7 @@ export default () => {
 
   let i = 0;
 
-  while (i <= 3) {
+  while (i <= 2) {
     const generator1 = Math.floor(Math.random() * 100);
 
     const generator2 = Math.floor(Math.random() * 50);
@@ -36,7 +36,7 @@ export default () => {
       console.log('Correct!');
     } else if (((question[13] || question[12]) === '*') && answer === mult.toString()) {
       console.log('Correct!');
-    }
+    }1
 
     if ((answer !== summ.toString()) && ((question[13] || question[12]) === '+')) {
       console.log(`${answer} is wrong answer ;(. Correct answer was ${summ}.`);
@@ -51,7 +51,7 @@ export default () => {
 
     i += 1;
 
-    if (i === 4) {
+    if (i === 3) {
       console.log(`Congratulations, ${name}!`);
     }
   }
