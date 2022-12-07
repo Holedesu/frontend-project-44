@@ -28,7 +28,7 @@ export default () => {
         progressStr += ' ';
         progressInt += generator2;
         realAnswer = progressInt;
-        console.log(realAnswer + ' only for vod');
+        console.log(`${realAnswer} only for vod`);
       } else {
         progressStr += progressInt + generator2;
         progressInt += generator2;

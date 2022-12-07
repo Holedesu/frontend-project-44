@@ -28,7 +28,7 @@ export default () => {
     if (answer === (generator1 + generator2).toString()) {
       console.log('Correct');
     } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was. '${generator1 + generator2}'`);
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${generator1 + generator2}'`);
     }
     i += 1;
 
