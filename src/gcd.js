@@ -7,7 +7,7 @@ import {
 
 export default () => {
   const name = greeting();
-
+  console.log('Find the greatest common divisor of given numbers.')
   let i = 0;
 
   while (i <= 2) {
@@ -29,7 +29,7 @@ export default () => {
     if (answer === (generator1 + generator2).toString()) {
       console.log('Correct');
     } else {
-      calcCond(answer, (generator1 + generator2), name);
+      return calcCond(answer, (generator1 + generator2), name);
     }
     i += 1;
 
