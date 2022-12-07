@@ -8,6 +8,7 @@ import {
 export default () => {
   let i = 0;
   const name = greeting();
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
 
   while (i <= 2) {
     const generator1 = Math.floor(Math.random() * 100);
