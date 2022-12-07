@@ -11,7 +11,7 @@ export default () => {
   while (i <= 2) {
     const generator1 = Math.floor(Math.random() * 100);
 
-    const generator2 = Math.floor(Math.random() * 50);
+    const generator2 = Math.floor(Math.random() * 10);
 
     const signsArr = ['+', '-', '*'];
 
