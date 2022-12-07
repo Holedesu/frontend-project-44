@@ -36,12 +36,13 @@ export default () => {
     } else if (((question[13] || question[12]) === '*') && answer === mult.toString()) {
       console.log('Correct!');
     }
-
-    if ((answer !== summ.toString()) && ((question[13] || question[12]) === '+')) {
+    if (answer === '') {
+      return console.log(`No answer.\nLet's try again, ${name}!`)
+    }else if ((answer !== summ.toString()) && ((question[13] || question[12]) === '+')) {
       return calcCond(answer, summ, name);
-    } if ((answer !== subtract.toString()) && ((question[13] || question[12]) === '-')) {
+    }else if ((answer !== subtract.toString()) && ((question[13] || question[12]) === '-')) {
       return calcCond(answer, subtract, name);
-    } if ((answer !== mult.toString()) && ((question[13] || question[12]) === '*')) {
+    }else if ((answer !== mult.toString()) && ((question[13] || question[12]) === '*')) {
       return calcCond(answer, mult, name);
     }
 
