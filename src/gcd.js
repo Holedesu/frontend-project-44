@@ -1,15 +1,16 @@
 import readlineSync from 'readline-sync';
 
-export default () => {
-  console.log('Welcome to the Brain Games!');
+import {
+  greeting,
+  calcCond,
+} from './index.js';
 
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  console.log('Find the greatest common divisor of given numbers.');
+export default () => {
+  const name = greeting();
 
   let i = 0;
 
-  while (i <= 3) {
+  while (i <= 2) {
     let generator1 = Math.floor(Math.random() * 100);
 
     let generator2 = Math.floor(Math.random() * 100);
@@ -28,11 +29,11 @@ export default () => {
     if (answer === (generator1 + generator2).toString()) {
       console.log('Correct');
     } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${generator1 + generator2}'`);
+      calcCond(answer, (generator1 + generator2), name);
     }
     i += 1;
 
-    if (i === 4) {
+    if (i === 3) {
       console.log(`Congratulations, ${name}!`);
     }
   }

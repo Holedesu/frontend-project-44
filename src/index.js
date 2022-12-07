@@ -40,8 +40,4 @@ export const celeb = (name) => {
   console.log(`Congratulations, ${name}!`);
 };
 
-
-
-export const calcCond = (answer, subtract, name) => {
-  return console.log(`${answer} is wrong answer ;(. Correct answer was ${subtract}.\nLet's try again, ${name}!`);
-}
+export const calcCond = (answer, subtract, name) => console.log(`${answer} is wrong answer ;(. Correct answer was ${subtract}.\nLet's try again, ${name}!`);

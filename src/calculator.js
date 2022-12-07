@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-import {calcCond, greeting} from './index.js'
+import { calcCond, greeting } from './index.js';
 
 export default () => {
   const name = greeting();
@@ -27,7 +27,7 @@ export default () => {
 
     console.log(question);
 
-    let answer = readlineSync.question('Your answer: ');
+    const answer = readlineSync.question('Your answer: ');
 
     if (((question[13] || question[12]) === '+') && answer === summ.toString()) {
       console.log('Correct!');
@@ -39,9 +39,9 @@ export default () => {
 
     if ((answer !== summ.toString()) && ((question[13] || question[12]) === '+')) {
       return calcCond(answer, summ, name);
-    } else if ((answer !== subtract.toString()) && ((question[13] || question[12]) === '-')) {
+    } if ((answer !== subtract.toString()) && ((question[13] || question[12]) === '-')) {
       return calcCond(answer, subtract, name);
-    } else if ((answer !== mult.toString()) && ((question[13] || question[12]) === '*')) {
+    } if ((answer !== mult.toString()) && ((question[13] || question[12]) === '*')) {
       return calcCond(answer, mult, name);
     }
 
