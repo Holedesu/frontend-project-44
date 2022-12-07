@@ -43,6 +43,5 @@ export const celeb = (name) => {
 
 
 export const calcCond = (answer, subtract, name) => {
-  console.log(`${answer} is wrong answer ;(. Correct answer was ${subtract}.`);
-  return console.log(`Let's try again, ${name}!`);
+  return console.log(`${answer} is wrong answer ;(. Correct answer was ${subtract}.\nLet's try again, ${name}!`);
 }

@@ -1,12 +1,9 @@
 import readlineSync from 'readline-sync';
 
-import { calcCond } from './index.js'
+import {calcCond, greeting} from './index.js'
 
 export default () => {
-  console.log('Welcome to the Brain Games!');
-
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
+  const name = greeting();
   console.log('What is the result of the expression?');
 
   let i = 0;
@@ -30,7 +27,7 @@ export default () => {
 
     console.log(question);
 
-    const answer = readlineSync.question('Your answer: ');
+    let answer = readlineSync.question('Your answer: ');
 
     if (((question[13] || question[12]) === '+') && answer === summ.toString()) {
       console.log('Correct!');
@@ -38,14 +35,14 @@ export default () => {
       console.log('Correct!');
     } else if (((question[13] || question[12]) === '*') && answer === mult.toString()) {
       console.log('Correct!');
-    }1
+    }
 
     if ((answer !== summ.toString()) && ((question[13] || question[12]) === '+')) {
-      calcCond();
-    } if ((answer !== subtract.toString()) && ((question[13] || question[12]) === '-')) {
-      calcCond();
-    } if ((answer !== mult.toString()) && ((question[13] || question[12]) === '*')) {
-      calcCond();
+      return calcCond(answer, summ, name);
+    } else if ((answer !== subtract.toString()) && ((question[13] || question[12]) === '-')) {
+      return calcCond(answer, subtract, name);
+    } else if ((answer !== mult.toString()) && ((question[13] || question[12]) === '*')) {
+      return calcCond(answer, mult, name);
     }
 
     i += 1;
