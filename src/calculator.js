@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
 
+import { calcCond } from './index.js'
+
 export default () => {
   console.log('Welcome to the Brain Games!');
 
@@ -39,14 +41,11 @@ export default () => {
     }1
 
     if ((answer !== summ.toString()) && ((question[13] || question[12]) === '+')) {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${summ}.`);
-      return console.log(`Let's try again, ${name}!`);
+      calcCond();
     } if ((answer !== subtract.toString()) && ((question[13] || question[12]) === '-')) {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${subtract}.`);
-      return console.log(`Let's try again, ${name}!`);
+      calcCond();
     } if ((answer !== mult.toString()) && ((question[13] || question[12]) === '*')) {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${mult}.`);
-      return console.log(`Let's try again, ${name}!`);
+      calcCond();
     }
 
     i += 1;

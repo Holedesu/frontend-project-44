@@ -39,3 +39,10 @@ export const greeting = () => {
 export const celeb = (name) => {
   console.log(`Congratulations, ${name}!`);
 };
+
+
+
+export const calcCond = (answer, subtract, name) => {
+  console.log(`${answer} is wrong answer ;(. Correct answer was ${subtract}.`);
+  return console.log(`Let's try again, ${name}!`);
+}
