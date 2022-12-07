@@ -7,7 +7,7 @@ import {
 
 export default () => {
   const name = greeting();
-  console.log('Find the greatest common divisor of given numbers.')
+  console.log('Find the greatest common divisor of given numbers.');
   let i = 0;
 
   while (i <= 2) {

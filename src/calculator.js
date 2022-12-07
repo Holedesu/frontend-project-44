@@ -37,12 +37,12 @@ export default () => {
       console.log('Correct!');
     }
     if (answer === '') {
-      return console.log(`No answer.\nLet's try again, ${name}!`)
-    }else if ((answer !== summ.toString()) && ((question[13] || question[12]) === '+')) {
+      return console.log(`No answer.\nLet's try again, ${name}!`);
+    } if ((answer !== summ.toString()) && ((question[13] || question[12]) === '+')) {
       return calcCond(answer, summ, name);
-    }else if ((answer !== subtract.toString()) && ((question[13] || question[12]) === '-')) {
+    } if ((answer !== subtract.toString()) && ((question[13] || question[12]) === '-')) {
       return calcCond(answer, subtract, name);
-    }else if ((answer !== mult.toString()) && ((question[13] || question[12]) === '*')) {
+    } if ((answer !== mult.toString()) && ((question[13] || question[12]) === '*')) {
       return calcCond(answer, mult, name);
     }
 
